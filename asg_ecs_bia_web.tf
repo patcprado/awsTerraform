@@ -13,6 +13,7 @@ resource "aws_autoscaling_group" "ecs" {
     version = "$Latest"
   }
 
+//ignora a linha 5
   lifecycle {
     ignore_changes = [ desired_capacity ]
   }

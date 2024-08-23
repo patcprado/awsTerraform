@@ -4,6 +4,12 @@ resource "aws_ecs_service" "bia" {
   task_definition = aws_ecs_task_definition.bia-web.arn
   desired_count   = 1
 
+
+// esta ignorando o count, linha 5
+  lifecycle {
+    ignore_changes = [ desired_count ]
+  }
+
   capacity_provider_strategy {
     capacity_provider = aws_ecs_capacity_provider.bia.name
     base              = 1
