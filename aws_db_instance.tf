@@ -5,7 +5,7 @@ resource "aws_db_instance" "bia" {
   auto_minor_version_upgrade            = true
   backup_retention_period               = 1
   backup_window                         = "04:47-05:17"
-  ca_cert_identifier                    = "rds-ca-2019"
+  ca_cert_identifier                    = "rds-ca-rsa2048-g1"
   character_set_name                    = null
   copy_tags_to_snapshot                 = true
   custom_iam_instance_profile           = null
